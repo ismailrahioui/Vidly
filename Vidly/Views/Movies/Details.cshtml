@@ -1,0 +1,75 @@
+﻿@model Vidly.Models.Movie
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Movie</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Genre.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Genre.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GenreSection.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GenreSection.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MovieName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MovieName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MovieImg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MovieImg)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MovieDic)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MovieDic)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MovieDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MovieDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Datesortie)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Datesortie)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

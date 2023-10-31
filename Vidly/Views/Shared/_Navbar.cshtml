@@ -1,0 +1,71 @@
+﻿@using Microsoft.AspNet.Identity
+@*<nav class="navbar navbar-expand-lg navbar-dark p-3 " id="headerNav">
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				@Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav glyphicon-align-center">
+					<li>@Html.ActionLink("Home", "Index", "Home")</li>
+					<li>@Html.ActionLink("About", "About", "Home")</li>
+					<li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+				</ul>
+				@Html.Partial("_LoginPartial")
+			</div>
+		</div>
+	</div>
+
+*@
+<nav class="navbar navbar-expand-lg navbar-dark p-3 fixed-top bg-danger " id="headerNav">
+	<div class="container-fluid">
+		<a class="navbar-brand d-block d-lg-none" href="/">
+			<i class="bi bi-film"></i>
+		</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class=" collapse navbar-collapse" id="navbarNavDropdown">
+			<ul class="navbar-nav mx-auto ">
+				<li class="nav-item">
+					@*@Html.ActionLink("Home", "Index", "Home",new { @class = "nav-link mx-2" })*@
+					<a href="/" class="nav-link mx-2">Home</a>
+				</li>
+					<li class="nav-item d-none d-lg-block">
+						<a class="nav-link mx-2 logo" href="/">
+							<i class="bi bi-film"></i> Vidly
+						</a>
+					</li>
+				<li class="nav-item">
+					@*@Html.ActionLink("Evénements", "About", "Home", new { @class = "nav-link mx-2" })*@
+					<a href="/Home/About" class="nav-link mx-2">Evenment</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						Cinema
+					</a>
+					<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<li><a class="dropdown-item" href="#">Tarif</a></li>
+						<li> <a href="/Home/About" class="dropdown-item">About us</a></li>
+						<li><a href="/Home/Contact" class="dropdown-item">Contact us</a></li>
+
+					</ul>
+				</li>
+			</ul>
+				@Html.Partial("_LoginPartial")
+			@*@if (this.User.IsInRole("CanManageMovie")) 
+			{
+			
+			}*@
+
+
+		</div>
+	</div>
+</nav>
+
